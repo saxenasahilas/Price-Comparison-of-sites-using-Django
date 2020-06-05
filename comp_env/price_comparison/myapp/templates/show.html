@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%load static %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="text-align:center;background-image:url({% static 'images/pic4.jpg' %});">
+<table border="1" style="width:80%;margin:0 auto;background-color:black;color:white;opacity:0.4;">
+    <tr style="background:brown;color:white;font-size:30px;">
+        <th style="padding:2px;">Paytm_prod</th>
+        <th style="padding:2px;">Paytm_price</th>
+        <th style="padding:2px;">Flipkart_prod</th>
+        <th style="padding:2px;">Flipkart_price</th>
+    </tr>
+    {% for flip in f %}
+	<tr style="font-size:20px;">
+		<td style="padding:2px;">{{flip.aprod}}</td>
+		<td style="padding:2px;">{{flip.aprice}}</td>
+		<td style="padding:2px;">{{flip.fprod}}</td>
+        <td style="padding:2px;">{{flip.fprice}}</td>
+	</tr>
+
+	{% endfor %}
+</table>
+
+</body>
+</html>

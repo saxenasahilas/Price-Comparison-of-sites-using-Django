@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% load static %}
+    <meta charset="UTF-8">
+	<title>Commercial Sites</title>
+</head>
+<body style="text-align:center;background-image:url({% static 'images/pic1.jpg' %})">
+<form action="{% url 'createtable' %}" method="post">
+	<h1 style="font-family:forte;font-size:120px;text-align:center;color:white;">COMPARE PRICE</h1>
+	<h2 style="font-size:50px;color:white;font-family: Times New Roman", Times, serif";><i>Begin from here...</i></h2>
+	{% csrf_token %}
+	<input type="text" name ="product" style="width:500px;height:30px;background-color:lightgrey;"/>
+	<input type="submit" value="Compare" style="width:150px;height:30px;font-size:15px;color:blue;font-family:forte;"/>
+</form>
+</body>
+</html>
